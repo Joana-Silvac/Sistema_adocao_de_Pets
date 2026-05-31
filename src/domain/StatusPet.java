@@ -1,4 +1,8 @@
 package src.domain;
 
-public class StatusPet {
+public enum StatusPet {
+    DISPONIVEL,
+    ADOTADO,
+    EM_TRATAMENTO
 }
+
