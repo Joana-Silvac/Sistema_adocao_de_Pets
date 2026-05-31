@@ -1,7 +1,7 @@
 {
   "curso": "Ciencia da Computacao",
   "disciplina": "Projeto de Programação",
-  "tema_escolhido": "1-Sistema de Gestão de uma ONG de Adoção de Pets",
+  "tema_escolhido": "1",
   "linguagem": "Java",
   "gerenciador_dependencias": "Maven",
   "integrantes": [
