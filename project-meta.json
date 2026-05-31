@@ -1,0 +1,29 @@
+{
+  "curso": "Ciencia da Computacao",
+  "disciplina": "Projeto de Programação",
+  "tema_escolhido": "1-Sistema de Gestão de uma ONG de Adoção de Pets",
+  "linguagem": "Java",
+  "gerenciador_dependencias": "Maven",
+  "integrantes": [
+    {
+      "nome": "Crislayne Victória Honório Braz",
+      "github_username": "vichnr"
+    },
+    {
+      "nome": "Laura Angela Gomes Pontes",
+      "github_username": "Laura-Pontes"
+    },
+    {
+      "nome": "Joana Da Silva Clemente",
+      "github_username": "Joana-Silvac"
+    },
+    {
+      "nome": "Nivia Mirelle de Oliveira",
+      "github_username": "nille0722"
+    },
+    {
+      "nome": "Maria Júlia de Lima Azevedo",
+      "github_username": "juuliazevedo"
+    }
+  ]
+}
