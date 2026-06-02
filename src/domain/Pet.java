@@ -3,39 +3,39 @@ package domain;
 public class Pet {
     private String nome;
     private String raca;
-    private String idade;
-    private StatusPet status;
+    private int idade;
+    private  StatusPet status;
 
-    public Pet(String nome, String raca,String idade, StatusPet status){
+
+    public Pet(String nome, String raca,int idade, StatusPet status){
+
+        if (idade < 0){
+            throw new IllegalArgumentException("A idade não pode ser negativa!");
+        }
         this.idade=idade;
         this.nome=nome;
         this.raca=raca;
         this.status=status;
-
-
+    }
+    public void alterarStatus(StatusPet novoStatus){
+        this.status = novoStatus;
     }
 
-    public String getStatus(){
-        if(status== StatusPet.DISPONIVEL){
-            return "Pet disponível par adoção";
-        } else if (status==StatusPet.EM_TRATAMENTO) {
-            return "Pet em tratamento";
-        }
-        else{
-            return "O pet não está disponivel";
-        }
-
+    public boolean estaAptoParaAdocao(){
+        return status == StatusPet.DISPONIVEL;
     }
 
     public String getNome(){
         return nome;
     }
 
-    public String getIdade() {
+    public int getIdade() {
         return idade;
     }
 
     public String getRaca() {
         return raca;
     }
+
+    public StatusPet getStatus(){return status;}
 }
