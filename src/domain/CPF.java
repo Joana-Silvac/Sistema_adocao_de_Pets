@@ -1,6 +1,6 @@
 package domain;
 
-public class CPF{
+public class CPF {
     private String numero;
     public CPF(String numero){
         if (numero == null || numero.length() != 11){

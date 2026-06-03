@@ -1,10 +1,10 @@
-package src.domain;
+package domain;
 
 public class Pet {
     private String nome;
     private String raca;
     private String idade;
-    private  StatusPet status;
+    private StatusPet status;
 
     public Pet(String nome, String raca,String idade, StatusPet status){
         this.idade=idade;
