@@ -1,14 +1,19 @@
-package src.domain;
+package domain;
 
-import src.domain.StatusPet;
+import domain.StatusPet;
 
 public class Pet {
     private String nome;
     private String raca;
-    private String idade;
-    private StatusPet status;
+    private int idade;
+    private  StatusPet status;
 
-    public Pet(String nome, String raca,String idade, StatusPet status){
+
+    public Pet(String nome, String raca,int idade, StatusPet status){
+
+        if (idade < 0){
+            throw new IllegalArgumentException("A idade não pode ser negativa!");
+        }
         this.idade=idade;
         this.nome=nome;
         this.raca=raca;
@@ -26,7 +31,14 @@ public class Pet {
         else{
             return "O pet não está disponivel";
         }
+    }
 
+    public void alterarStatus(StatusPet novoStatus){
+        this.status = novoStatus;
+    }
+
+    public boolean estaAptoParaAdocao(){
+        return status == StatusPet.DISPONIVEL;
     }
 
     public StatusPet getStatus() {
@@ -41,7 +53,7 @@ public class Pet {
         return nome;
     }
 
-    public String getIdade() {
+    public int getIdade() {
         return idade;
     }
 

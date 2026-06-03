@@ -1,8 +1,8 @@
 package domain.aggregates;
 
-import src.domain.Pet;
+import domain.Pet;
 import domain.Adotante;
-import src.domain.StatusPet;
+import domain.StatusPet;
 import java.time.LocalDate;
 
 public class ProcessoAdocao {
