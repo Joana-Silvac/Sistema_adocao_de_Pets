@@ -1,10 +1,12 @@
 package src.domain;
 
+import src.domain.StatusPet;
+
 public class Pet {
     private String nome;
     private String raca;
     private String idade;
-    private  StatusPet status;
+    private StatusPet status;
 
     public Pet(String nome, String raca,String idade, StatusPet status){
         this.idade=idade;
@@ -15,7 +17,7 @@ public class Pet {
 
     }
 
-    public String getStatus(){
+    public String getStatusDescricao(){
         if(status== StatusPet.DISPONIVEL){
             return "Pet disponível par adoção";
         } else if (status==StatusPet.EM_TRATAMENTO) {
@@ -25,6 +27,14 @@ public class Pet {
             return "O pet não está disponivel";
         }
 
+    }
+
+    public StatusPet getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusPet status) {
+        this.status = status;
     }
 
     public String getNome(){
