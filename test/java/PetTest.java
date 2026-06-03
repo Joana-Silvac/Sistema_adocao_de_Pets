@@ -1,7 +1,7 @@
 
 import org.junit.jupiter.api.Test;
 import domain.Pet;
-import domain.StatusPet;
+import src.domain.StatusPet;
 
 import static org.junit.jupiter.api.Assertions.*;
 

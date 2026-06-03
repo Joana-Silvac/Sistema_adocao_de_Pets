@@ -1,5 +1,7 @@
 package domain;
 
+import domain.StatusPet;
+
 public class Pet {
     private String nome;
     private String raca;
@@ -16,13 +18,35 @@ public class Pet {
         this.nome=nome;
         this.raca=raca;
         this.status=status;
+
+
     }
+
+    public String getStatusDescricao(){
+        if(status== StatusPet.DISPONIVEL){
+            return "Pet disponível par adoção";
+        } else if (status==StatusPet.EM_TRATAMENTO) {
+            return "Pet em tratamento";
+        }
+        else{
+            return "O pet não está disponivel";
+        }
+    }
+
     public void alterarStatus(StatusPet novoStatus){
         this.status = novoStatus;
     }
 
     public boolean estaAptoParaAdocao(){
         return status == StatusPet.DISPONIVEL;
+    }
+
+    public StatusPet getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusPet status) {
+        this.status = status;
     }
 
     public String getNome(){
@@ -36,6 +60,4 @@ public class Pet {
     public String getRaca() {
         return raca;
     }
-
-    public StatusPet getStatus(){return status;}
 }
