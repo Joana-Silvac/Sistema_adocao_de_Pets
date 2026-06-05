@@ -43,7 +43,7 @@ O projeto utiliza GitHub Actions para executar automaticamente o processo de bui
 
 ## Equipe
 
-* Crislayne Victória Honório Braz
+* Crislany Victória Honório Braz
 * Laura Angela Pontes
 * Joana da Silva Clemente
 * Nivia Mirelle de Oliveira
