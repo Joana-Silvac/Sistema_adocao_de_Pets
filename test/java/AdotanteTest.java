@@ -1,13 +1,18 @@
-
+import domain.Email;
 import domain.Adotante;
 import domain.CPF;
 import domain.Endereco;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
-public class AdotanteTest{
+
+public class AdotanteTest {
+
     @Test
-    void deveCriarAdotanteValido(){
+    void deveCriarAdotanteValido() {
+
         CPF cpf = new CPF("87945601252");
+
         Endereco endereco =
                 new Endereco(
                         "Rua L",
@@ -15,31 +20,52 @@ public class AdotanteTest{
                         "BA",
                         "03000-000"
                 );
-                Adotante adotante =
+
+        Email email = new Email("joyce@email.com");
+
+        Adotante adotante =
                 new Adotante(
                         "Joyce",
                         cpf,
-                        endereco
+                        endereco,
+                        email
                 );
-        assertEquals("Joyce", adotante.getNome());}
+
+        assertEquals("Joyce", adotante.getNome());
+    }
+
     @Test
-    void deveRejeitarCpfInvalido(){
+    void deveRejeitarCpfInvalido() {
+
         assertThrows(
                 IllegalArgumentException.class,
                 () -> new CPF("879")
-        );}
+        );
+    }
+
     @Test
-    void deveRejeitarNomeVazio(){
+    void deveRejeitarNomeVazio() {
+
         CPF cpf = new CPF("87945601252");
-                Endereco endereco =
+
+        Endereco endereco =
                 new Endereco(
                         "Rua L",
                         "Bahia",
                         "BA",
                         "03000-000"
                 );
+
+        Email email = new Email("joyce@email.com");
+
         assertThrows(
                 IllegalArgumentException.class,
-                () -> new Adotante("", cpf, endereco)
+                () -> new Adotante(
+                        "",
+                        cpf,
+                        endereco,
+                        email
+                )
         );
-    }}
+    }
+}

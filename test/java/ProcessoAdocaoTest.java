@@ -15,11 +15,13 @@ public class ProcessoAdocaoTest {
                 "PB",
                 "58000-000"
         );
+        Email email = new Email("thomas@email.com");
 
         return new Adotante(
                 "Thomas",
                 cpf,
-                endereco
+                endereco,
+                email
         );
     }
 
